@@ -12,7 +12,7 @@ const deluser = async (req, res) => {
                 id: perm
             }
         })
-        res.status(200).json(deleteUser);
+        res.status(200).json({ data: "Delete" });
     } else {
         res.status(403).json({ err: "Error has occurred while deleting a user." })
     }

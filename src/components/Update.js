@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Button from '@material-ui/core/Button';
@@ -48,17 +48,20 @@ const Update = (props) => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
             })
+            props.getData();
         } catch (error) {
             console.error(error);
         }
 
     }
 
+
     const handleOpen = () => {
         setOpen(true);
     };
 
     const handleClose = () => {
+        updateData()
         setOpen(false);
     };
 
@@ -81,7 +84,7 @@ const Update = (props) => {
             <button type="button" onClick={handleClose}>
                 Close
             </button>
-            <button type="button" onClick={updateData}>
+            <button type="button" onClick={handleClose}>
                 Update
             </button>
         </div>
@@ -89,7 +92,7 @@ const Update = (props) => {
 
     return (
         <div>
-            <Button color="primary" variant='contained' type="button" onClick={handleOpen}>
+            <Button color="primary" variant='contained' type="button" size="small" onClick={handleOpen}>
                 Update
             </Button>
             <Modal

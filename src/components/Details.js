@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link'
 import Update from './Update';
+import CardTodo from './Card';
 const Details = () => {
 
     const [getTodos, setTodos] = useState([]);
@@ -36,14 +37,15 @@ const Details = () => {
                 getTodos.map((data, index) => {
                     return (
                         <div key={index}>
-                            <p>Firt Name: {data.todo}</p>
-                            {/* <Button variant='contained' color="primary"><Link href="/">Update</Link></Button> */}
+                            {/* <p>Firt Name: {data.todo}</p>
+                            
                             <Update todosData={data} />
                             <Button
                                 variant='contained'
                                 color="primary"
                                 onClick={() => delTodo(data.id)}
-                            >Delete</Button>
+                            >Delete</Button> */}
+                            <CardTodo todosData={data} delTodo={delTodo} getData={getData} />
                         </div>
                     )
                 })
