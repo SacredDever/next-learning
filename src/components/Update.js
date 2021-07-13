@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 function rand() {
     return Math.round(Math.random() * 20) - 10;
@@ -28,11 +30,13 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Update = () => {
+const Update = (props) => {
+    console.log(props)
     const classes = useStyles();
     // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = useState(getModalStyle);
     const [open, setOpen] = useState(false);
+    const [todo, setTodo] = useState(props.todosData.todo)
 
     const handleOpen = () => {
         setOpen(true);
@@ -48,6 +52,15 @@ const Update = () => {
             <p id="simple-modal-description">
                 Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
             </p>
+            <form className={classes.root} noValidate autoComplete="off">
+                <TextField
+                    id="outlined-basic"
+                    label="Add Todo"
+                    variant="outlined"
+                    value={todo}
+                    onChange={(e) => setTodos(e.target.value)} />
+
+            </form>
             {/* <SimpleModal /> */}
             <button type="button" onClick={handleClose}>
                 Close
@@ -57,9 +70,9 @@ const Update = () => {
 
     return (
         <div>
-            <button type="button" onClick={handleOpen}>
+            <Button color="primary" variant='contained' type="button" onClick={handleOpen}>
                 Update
-            </button>
+            </Button>
             <Modal
                 open={open}
                 onClose={handleClose}
