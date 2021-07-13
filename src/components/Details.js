@@ -23,11 +23,10 @@ const Details = () => {
                 method: 'DELETE'
             })
             setTodos(getTodos.filter(deluser => deluser.id !== id))
-            // userInfo.filter(deluser => deluser.id !== id)
             const data = await deleteUserData.json();
         } catch (error) {
-            // console.error(message.error);
-            // throw new Error("Error")
+
+            throw new Error("Error")
         }
     }
     return (
@@ -43,7 +42,7 @@ const Details = () => {
                             <Button
                                 variant='contained'
                                 color="primary"
-                                onClick={() => delTodo(u.id)}
+                                onClick={() => delTodo(data.id)}
                             >Delete</Button>
                         </div>
                     )

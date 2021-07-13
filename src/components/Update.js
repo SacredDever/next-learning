@@ -31,12 +31,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Update = (props) => {
-    console.log(props)
     const classes = useStyles();
     // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = useState(getModalStyle);
     const [open, setOpen] = useState(false);
-    const [todo, setTodo] = useState(props.todosData.todo)
+    const [todo, setTodo] = useState(props.todosData.todo);
+
+    const updateData = async () => {
+        try {
+            const body = {
+                todo: todo,
+
+            }
+            const response = await fetch(`http://localhost:3000/api/update/${props.todosData.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            })
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
 
     const handleOpen = () => {
         setOpen(true);
@@ -58,12 +74,15 @@ const Update = (props) => {
                     label="Add Todo"
                     variant="outlined"
                     value={todo}
-                    onChange={(e) => setTodos(e.target.value)} />
+                    onChange={(e) => setTodo(e.target.value)} />
 
             </form>
             {/* <SimpleModal /> */}
             <button type="button" onClick={handleClose}>
                 Close
+            </button>
+            <button type="button" onClick={updateData}>
+                Update
             </button>
         </div>
     );

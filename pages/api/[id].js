@@ -3,7 +3,6 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const deluser = async (req, res) => {
-    console.log('>>', req.query)
 
     if (req.method === 'DELETE') {
         const { id } = req.query;
