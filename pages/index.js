@@ -30,7 +30,11 @@ export default function Home() {
         } catch (error) {
             throw new Error("erro")
         }
+
+        setTodos('');
     }
+
+
 
     return (
         <div >
