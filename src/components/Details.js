@@ -2,6 +2,7 @@ import { prisma, PrismaClient } from '@prisma/client';
 import { useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link'
+import Update from './Update';
 const Details = () => {
 
     const [getTodos, setTodos] = useState([]);
@@ -33,11 +34,12 @@ const Details = () => {
         <div>
             <h1>Details</h1>
             {
-                getTodos.map((u, index) => {
+                getTodos.map((data, index) => {
                     return (
                         <div key={index}>
-                            <p>Firt Name: {u.todo}</p>
-                            <Button variant='contained' color="primary"><Link href="/">Update</Link></Button>
+                            <p>Firt Name: {data.todo}</p>
+                            {/* <Button variant='contained' color="primary"><Link href="/">Update</Link></Button> */}
+                            <Update todosData={data} />
                             <Button
                                 variant='contained'
                                 color="primary"
