@@ -4,7 +4,8 @@ import Button from '@material-ui/core/Button';
 import Link from 'next/link'
 import Update from './Update';
 import CardTodo from './Card';
-const Details = () => {
+import AddTodo from './AddTodo';
+const Details = (props) => {
 
     const [getTodos, setTodos] = useState([]);
 
@@ -27,11 +28,13 @@ const Details = () => {
             const data = await deleteUserData.json();
         } catch (error) {
 
-            throw new Error("Error")
+            console.log("error")
         }
     }
     return (
         <div>
+            {/* <Button variant='contained' color="primary" onClick={props.submitData} >Submit</Button> */}
+            <AddTodo getData={getData} />
             <h1>Details</h1>
             {
                 getTodos.map((data, index) => {

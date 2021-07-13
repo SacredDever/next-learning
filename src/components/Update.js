@@ -61,9 +61,13 @@ const Update = (props) => {
     };
 
     const handleClose = () => {
-        updateData()
         setOpen(false);
     };
+
+    const updateAndClose = () => {
+        updateData()
+        setOpen(false);
+    }
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
@@ -80,11 +84,10 @@ const Update = (props) => {
                     onChange={(e) => setTodo(e.target.value)} />
 
             </form>
-            {/* <SimpleModal /> */}
             <button type="button" onClick={handleClose}>
                 Close
             </button>
-            <button type="button" onClick={handleClose}>
+            <button type="button" onClick={updateAndClose}>
                 Update
             </button>
         </div>

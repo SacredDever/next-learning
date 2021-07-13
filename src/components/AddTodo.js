@@ -1,9 +1,8 @@
-
 import { Button } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
-import Details from '../src/components/Details';
+// import Details from '../src/components/Details';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Home() {
+export default function AddTodo(props) {
     const classes = useStyles();
     const [todos, setTodos] = useState();
 
@@ -27,6 +26,8 @@ export default function Home() {
                 method: 'POST',
                 body: JSON.stringify(body),
             })
+
+            props.getData();
         } catch (error) {
             throw new Error("erro")
         }
@@ -38,8 +39,8 @@ export default function Home() {
 
     return (
         <div >
-            <h1>TODO</h1>
-            {/* <form className={classes.root} noValidate autoComplete="off">
+
+            <form className={classes.root} noValidate autoComplete="off">
                 <TextField
                     id="outlined-basic"
                     label="Add Todo"
@@ -47,10 +48,10 @@ export default function Home() {
                     value={todos}
                     onChange={(e) => setTodos(e.target.value)} />
 
-            </form> */}
-            {/* <Button variant='contained' color="primary" onClick={submitData} >Submit</Button> */}
+            </form>
+            <Button variant='contained' color="primary" onClick={submitData} >Submit</Button>
 
-            <Details submitData={submitData} />
+
         </div>
     )
 }
