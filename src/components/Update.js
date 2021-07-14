@@ -82,12 +82,12 @@ const Update = (props) => {
                     onChange={(e) => setTodo(e.target.value)} />
 
             </form>
-            <button type="button" onClick={handleClose}>
+            <Button size="small" type="button" color="primary" variant="contained" onClick={handleClose}>
                 Close
-            </button>
-            <button type="button" onClick={updateAndClose}>
+            </Button>
+            <Button size="small" type="button" color="primary" variant="contained" onClick={updateAndClose}>
                 Update
-            </button>
+            </Button>
         </div>
     );
 
