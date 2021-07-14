@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import NavBar from "../src/components/NavBar";
@@ -17,6 +17,13 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+  const [dark, setDark] = useState(false)
+
+  const theme = createTheme({
+    palette: {
+      type: dark ? 'dark' : 'light',
+    },
+  })
 
   return (
     <React.Fragment>
@@ -27,8 +34,8 @@ export default function MyApp(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <NavBar />
       <ThemeProvider theme={theme}>
+        <NavBar checked={dark} setDark={setDark} />
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
