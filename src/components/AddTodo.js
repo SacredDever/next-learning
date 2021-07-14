@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function AddTodo(props) {
+const AddTodo = (props) => {
     const classes = useStyles();
     const [todos, setTodos] = useState();
 
@@ -81,3 +81,5 @@ export default function AddTodo(props) {
         </div >
     )
 }
+
+export default AddTodo;

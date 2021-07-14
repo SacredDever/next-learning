@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function CardTodo(props) {
+const CardTodo = (props) => {
     const classes = useStyles();
 
     return (
@@ -56,3 +56,4 @@ export default function CardTodo(props) {
     );
 }
 
+export default CardTodo;

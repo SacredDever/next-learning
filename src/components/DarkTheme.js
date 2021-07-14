@@ -29,4 +29,4 @@ const DarkTheme = (props) => {
     )
 }
 
-export default DarkTheme
+export default DarkTheme;

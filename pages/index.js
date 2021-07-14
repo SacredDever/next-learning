@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function Home() {
+const Home = () => {
     const classes = useStyles();
     const [todos, setTodos] = useState();
 
@@ -66,3 +66,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home;

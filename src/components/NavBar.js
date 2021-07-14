@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    // menuButton: {
-    //     marginRight: theme.spacing(20),
-    // },
     appName: {
         marginLeft: 170,
         [theme.breakpoints.down("sm")]: {
@@ -22,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function NavBar(props) {
+const NavBar = (props) => {
     console.log(props)
     const classes = useStyles();
 
@@ -40,3 +37,5 @@ export default function NavBar(props) {
         </div>
     );
 }
+
+export default NavBar;

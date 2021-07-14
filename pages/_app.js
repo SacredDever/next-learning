@@ -7,7 +7,7 @@ import theme from "../src/theme";
 import NavBar from "../src/components/NavBar";
 
 
-export default function MyApp(props) {
+const MyApp = (props) => {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
@@ -48,3 +48,4 @@ MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
+export default MyApp;
