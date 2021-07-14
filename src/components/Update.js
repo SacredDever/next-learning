@@ -71,14 +71,12 @@ const Update = (props) => {
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-            <h2 id="simple-modal-title">Text in a modal</h2>
-            <p id="simple-modal-description">
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </p>
+            <h2 id="simple-modal-title">Update Todo</h2>
+
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField
                     id="outlined-basic"
-                    label="Add Todo"
+                    label="Edit todo"
                     variant="outlined"
                     value={todo}
                     onChange={(e) => setTodo(e.target.value)} />

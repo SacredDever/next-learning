@@ -11,7 +11,19 @@ const useStyles = makeStyles((theme) => ({
             margin: theme.spacing(1),
             width: '25ch',
         },
+        // marginLeft: 20
     },
+    layout: {
+        marginLeft: 200,
+        marginRight: 200,
+        [theme.breakpoints.down("sm")]: {
+            marginLeft: 50,
+            marginRight: 50,
+
+
+        },
+    }
+
 }));
 
 export default function Home() {
@@ -37,8 +49,8 @@ export default function Home() {
 
 
     return (
-        <div >
-            <h1>TODO</h1>
+        <div className={classes.layout}>
+            {/* <h2>Add new todo</h2> */}
             {/* <form className={classes.root} noValidate autoComplete="off">
                 <TextField
                     id="outlined-basic"
@@ -47,10 +59,10 @@ export default function Home() {
                     value={todos}
                     onChange={(e) => setTodos(e.target.value)} />
 
-            </form> */}
-            {/* <Button variant='contained' color="primary" onClick={submitData} >Submit</Button> */}
+            </form>
+            <Button variant='contained' color="primary" onClick={submitData} >Submit</Button> */}
 
-            <Details submitData={submitData} />
+            <Details />
         </div>
     )
 }
