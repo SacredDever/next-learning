@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NavBar = (props) => {
-    console.log(props)
     const classes = useStyles();
 
     return (
