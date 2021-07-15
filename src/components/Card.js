@@ -37,9 +37,6 @@ const CardTodo = (props) => {
                 <Typography variant="h5" component="h2">
                     {props.todosData.todo}
                 </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                </Typography>
 
             </CardContent>
             <CardActions>

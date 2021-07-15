@@ -1,8 +1,5 @@
-import { prisma, PrismaClient } from '@prisma/client';
+
 import { useEffect, useState } from 'react';
-import Button from '@material-ui/core/Button';
-import Link from 'next/link'
-import Update from './Update';
 import CardTodo from './Card';
 import AddTodo from './AddTodo';
 const Details = (props) => {
@@ -37,7 +34,7 @@ const Details = (props) => {
             <AddTodo getData={getData} />
             <h1>All Todos</h1>
             {
-                getTodos.map((data, index) => {
+                getTodos.length === 0 ? <p>No Todos added yet</p> : getTodos.map((data, index) => {
                     return (
                         <div key={index}>
                             <CardTodo todosData={data} delTodo={delTodo} getData={getData} />
