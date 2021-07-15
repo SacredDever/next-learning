@@ -33,21 +33,13 @@ const Details = (props) => {
     }
     return (
         <div>
-            {/* <Button variant='contained' color="primary" onClick={props.submitData} >Submit</Button> */}
+
             <AddTodo getData={getData} />
             <h1>All Todos</h1>
             {
                 getTodos.map((data, index) => {
                     return (
                         <div key={index}>
-                            {/* <p>Firt Name: {data.todo}</p>
-                            
-                            <Update todosData={data} />
-                            <Button
-                                variant='contained'
-                                color="primary"
-                                onClick={() => delTodo(data.id)}
-                            >Delete</Button> */}
                             <CardTodo todosData={data} delTodo={delTodo} getData={getData} />
                         </div>
                     )

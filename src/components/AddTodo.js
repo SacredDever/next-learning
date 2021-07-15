@@ -2,9 +2,6 @@ import { Button, Grid, Paper } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
-// import Details from '../src/components/Details';
-import Box from '@material-ui/core/Box';
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,16 +16,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 25
 
     },
-    // layout: {
-    //     // marginLeft: 200,
-    //     // marginRight: 200,
-    //     [theme.breakpoints.down("sm")]: {
-    //         marginLeft: 100,
-    //         marginRight: 100,
-
-
-    //     },
-    // },
     btnStyle: {
         marginLeft: 0,
         [theme.breakpoints.down("sm")]: {
@@ -61,8 +48,6 @@ const AddTodo = (props) => {
 
         setTodos('');
     }
-
-
 
     return (
         <div >
