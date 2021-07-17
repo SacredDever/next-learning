@@ -12,3 +12,4 @@
 ### Technologies used
 * Next Js
 * Prisma
+* JavaScript
