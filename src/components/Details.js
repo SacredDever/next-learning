@@ -59,9 +59,12 @@ const Details = (props) => {
         <div>
 
             <AddTodo getData={getData} />
-            <h1>All Todos proted</h1>
+            <h1>All Todos</h1>
+            <h4>Welcome {props.user.email}</h4>
             {
+
                 getTodos.length === 0 ? <p>No Todos added yet</p> : getTodos.map((data, index) => {
+                    console.log(props.user)
                     return (
                         <div key={index}>
                             <CardTodo todosData={data} delTodo={delTodo} getData={getData} />

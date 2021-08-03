@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import NavBar from "../src/components/NavBar";
 import { Provider } from "next-auth/client";
+import { red } from '@material-ui/core/colors';
 
 
 const MyApp = (props) => {
@@ -23,6 +24,15 @@ const MyApp = (props) => {
     const theme = createTheme({
         palette: {
             type: dark ? 'dark' : 'light',
+            primary: {
+                main: '#556cd6',
+            },
+            secondary: {
+                main: '#19857b',
+            },
+            error: {
+                main: red.A400,
+            },
         },
     })
 
