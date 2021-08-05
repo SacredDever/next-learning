@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         top: 0,
         left: 0,
         // background: "#111",// this is just to test guide
-        background: "#303030",// this is just to test guide
+        background: "#2C2F30",// this is just to test guide
         overflowX: "hidden",
         paddingTop: '20px',
     },
