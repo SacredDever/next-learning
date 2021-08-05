@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import SaveIcon from '@material-ui/icons/Save';
 import FeatureTile from '../Button/FeatureTile';
+import ContentTile from '../Button/ContentTile';
 const useStyles = makeStyles({
     root: {
     },
@@ -58,7 +59,8 @@ const LeftNav = () => {
                 <Loginbtn className={classes.btn} endIcon={<SaveIcon />}>Create a Title for Your Fligth</Loginbtn>
 
                 <FeatureTile startIcon={<SaveIcon />} endIcon={<SaveIcon />}>Feature Tile</FeatureTile>
-                <Loginbtn startIcon={<SaveIcon />} className={classes.btn} >Add Content tile</Loginbtn>
+
+                <ContentTile startIcon={<SaveIcon />}>Add Content Tile</ContentTile>
             </div>
 
 
