@@ -9,8 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
-        marginTop: 5,
-        height: 250
+        height: 500
     },
     bullet: {
         display: 'inline-block',
@@ -25,21 +24,19 @@ const useStyles = makeStyles({
     },
 });
 
-const Small = () => {
+const MainTile = () => {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
 
     return (
         <Card className={classes.root}>
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Small
+                    Feature Tile
                 </Typography>
-
             </CardContent>
 
         </Card>
     );
 }
 
-export default Small;
+export default MainTile;
