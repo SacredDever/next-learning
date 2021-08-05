@@ -48,10 +48,7 @@ const useStyles = makeStyles({
         textTransform: 'none',
         background: "#424242",
         float: "right",
-        '&:hover': {
-            background: "#424242",
-            borderBottom: "5px solid blue"
-        },
+
 
     },
 
@@ -68,7 +65,7 @@ const useStyles = makeStyles({
         marginBottom: 30,
         '&:hover': {
             background: "#424242",
-            borderBottom: "5px solid blue"
+            borderBottom: "5px solid #15C9EA"
         },
     }
 
