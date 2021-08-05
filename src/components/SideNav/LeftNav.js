@@ -41,14 +41,6 @@ const useStyles = makeStyles({
         background: "#424242"
     },
 
-    btn: {
-        marginLeft: 10,
-        fontSize: 11,
-        textAlign: "left",
-        marginTop: 5,
-        background: "#424242"
-    }
-
 });
 // layout
 const LeftNav = () => {

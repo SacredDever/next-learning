@@ -10,6 +10,7 @@ import CardContainer from '../../src/components/Cards/CardContainer';
 import MainTile from '../../src/components/Cards/MainTile';
 import SaveIcon from '@material-ui/icons/Save';
 import IconButton from '@material-ui/core/IconButton';
+import SaveBtn from '../../src/components/Button/SaveBtn';
 const useStyles = makeStyles({
     root: {
     },
@@ -82,8 +83,8 @@ const Editor = () => {
             <div className={classes.main}>
                 <div>
 
-                    <Loginbtn className={classes.save}>Save</Loginbtn>
                     <Loginbtn className={classes.save}>PREVIEW</Loginbtn>
+                    <SaveBtn>Save</SaveBtn>
 
 
                     <IconButton className={`${classes.btnSt} ${classes.leftbtn} `} aria-label="delete">
