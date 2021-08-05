@@ -2,7 +2,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Details from '../src/components/Details';
 import React from 'react';
-import { Button, Link } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import Link from 'next/link';
 import { withStyles } from "@material-ui/core/styles";
 
 import { signIn, signOut, useSession } from "next-auth/client";
@@ -83,6 +84,11 @@ const Home = ({ classes }) => {
                         }
                         <div>
                             <button onClick={signOut}>Logout</button>
+                            <Link href="./editor/Editor" passHref={true}>
+                                <button >
+                                    Editor
+                                </button>
+                            </Link>
                             <Details user={session} />
                         </div>
                     </>
