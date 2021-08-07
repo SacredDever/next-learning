@@ -84,11 +84,6 @@ const Home = ({ classes }) => {
                         }
                         <div>
                             <button onClick={signOut}>Logout</button>
-                            <Link href="./editor/Editor" passHref={true}>
-                                <button >
-                                    Editor
-                                </button>
-                            </Link>
                             <Details user={session} />
                         </div>
                     </>
