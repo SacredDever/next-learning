@@ -13,3 +13,4 @@
 * Next Js
 * Prisma
 * JavaScript
+* PostgreSQL
