@@ -14,3 +14,4 @@
 * Prisma
 * JavaScript
 * PostgreSQL
+* Material UI
