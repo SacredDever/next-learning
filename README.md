@@ -16,3 +16,4 @@
 * JavaScript
 * PostgreSQL
 * Material UI
+* Auth0
